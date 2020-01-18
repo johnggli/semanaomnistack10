@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+
+// Conceitos principais do react: Componente, Propriedade e Estado
+// fragment: tag sem nomenclatura: <></>
+// desestruturação: "vou pegar um obj/vetor e vou dividir ele em variaveis"
+// imutabilidade: "nunca vou alterar o valor de um dado, e sim criar um novo dado a partir do valor anterior que eu tinha dele"
 
 function App() {
+  const [counter, setCounter] = useState(0);  // desestruturação
+
+  function incrementCounter() {
+    setCounter(counter + 1);  // imutabilidade
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Contador: {counter}</h1>
+      <button onClick={incrementCounter}>Incrementar</button>
+    </>
   );
 }
 
