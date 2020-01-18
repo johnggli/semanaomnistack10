@@ -1,4 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
+
+import './global.css';
+import './App.css';
+import './Sidebar.css';
+import './Main.css';
 
 // Conceitos principais do react: Componente, Propriedade e Estado
 // fragment: tag sem nomenclatura: <></>
@@ -6,17 +11,59 @@ import React, { useState } from 'react';
 // imutabilidade: "nunca vou alterar o valor de um dado, e sim criar um novo dado a partir do valor anterior que eu tinha dele"
 
 function App() {
-  const [counter, setCounter] = useState(0);  // desestruturação
-
-  function incrementCounter() {
-    setCounter(counter + 1);  // imutabilidade
-  }
 
   return (
-    <>
-      <h1>Contador: {counter}</h1>
-      <button onClick={incrementCounter}>Incrementar</button>
-    </>
+    <div id="app">
+      <aside>
+        <strong>Cadastrar</strong>
+        <form>
+          <div class="input-block">
+            <label htmlFor="github_username">Usuário do Github</label>
+            <input name="github_username" id="github_username" required/>
+          </div>
+
+          <div class="input-block">
+            <label htmlFor="techs">Tecnologias</label>
+            <input name="techs" id="techs" required/>
+          </div>
+
+          <div className="input-group">
+
+            <div class="input-block">
+              <label htmlFor="latitude">Latitude</label>
+              <input name="latitude" id="latitude" required/>
+            </div>
+
+            <div class="input-block">
+              <label htmlFor="longitude">Longitude</label>
+              <input name="longitude" id="longitude" required/>
+            </div>
+
+          </div>
+
+          <button type="submit">Salvar</button>
+        </form>
+      </aside>
+
+      <main>
+        <ul>
+          <li className="dev-item">
+            <header>
+              <img src="https://avatars0.githubusercontent.com/u/43749971?s=460&v=4" alt="John Emerson"/>
+
+              <div className="user-info">
+                <strong>John Emerson</strong>
+                <span>ReactJS, React Native, Node.js</span>
+              </div>
+            </header>
+
+            <p>Student of Systems Analysis and Development at IFPI - Federal Institute of Piauí.</p>
+            <a href="https://github.com/JohnEmerson1406">Acessar perfil no Github</a>
+          </li>
+        </ul>
+      </main>
+
+    </div>
   );
 }
 
