@@ -1,0 +1,2 @@
+no backend: yarn dev ou npx nodemon
+no frontend: yarn start ou npx nodemon
