@@ -5,7 +5,7 @@ import { requestPermissionsAsync, getCurrentPositionAsync } from 'expo-location'
 
 // requestPermission pede as permissões, getCurrentPosition pega a posição do usuario.
 
-function Main() {
+function Main({ navigation }) {
     const [currentRegion, setCurrentRegion] = useState(null);
 
     useEffect(() => {
@@ -40,7 +40,9 @@ function Main() {
             <Marker coordinate={{ latitude: -5.0047668, longitude: -42.7763375 }}>
                 <Image style={styles.avatar} source={{ uri: 'https://avatars0.githubusercontent.com/u/43749971?s=460&v=4' }} />
 
-                <Callout>
+                <Callout onPress={() => {
+                    navigation.navigate('Profile', { github_username: 'JohnEmerson1406' });
+                }}>
                     <View style={styles.callout}>
                         <Text style={styles.devName}>John Emerson</Text>
                         <Text style={styles.devBio}>aki é a bio po kkk dale</Text>
