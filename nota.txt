@@ -1,4 +1,6 @@
 no backend: yarn dev ou npx nodemon
 no frontend: yarn start ou npx nodemon
 
+axios é uma biblioteca que serve para fazer chamadas à API
+
 https://docs.expo.io/versions/latest/
