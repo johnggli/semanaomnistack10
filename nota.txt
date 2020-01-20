@@ -1,5 +1,6 @@
 no backend: yarn dev ou npx nodemon
 no frontend: yarn start ou npx nodemon
+no mobile: yarn start
 
 axios é uma biblioteca que serve para fazer chamadas à API
 
