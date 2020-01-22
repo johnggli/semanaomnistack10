@@ -75,6 +75,6 @@ yarn start
 Assim que o processo terminar, automaticamente será aberta no seu navegador a página `localhost:19002`. Conecte seu emulador, ou teste o aplicativo por `LAN`: baixe o aplicativo *Expo* da Play Store ou App Store e em seguida escaneie o código QR.
 
 
-Extras:
+### Extras
 - [Shields.io](https://shields.io/)
 - [Github Emojis](https://gist.github.com/rxaviers/7360908)
